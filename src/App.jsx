@@ -3,6 +3,19 @@ import './App.css'
 
 function App() {
 
+  const getCurrentTime = () => {
+    const today = new Date()
+    const hours = today.getHours()
+    const min = today.getMinutes()
+    const sec = today.getSeconds()
+    
+    return (
+      hours,
+      min,
+      sec
+    )
+  }
+
   return (
     <div>
       <main className='bg-gradient-to-t from-cyan-300 to-sky-700'>
