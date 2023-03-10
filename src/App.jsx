@@ -21,10 +21,19 @@ function App() {
     const min = today.getMinutes()
     const sec = today.getSeconds()
     return {
-      hours,
-      min,
-      sec,
+      hours: formatTime(hours), 
+      min: formatTime(min), 
+      sec: formatTime(sec)
+    };
+  }
+  const formatTime = (time) =>{
+    const timeString = String(time);
+    if(timeString.length==2){
+      return time
+
     }
+    const newTime = timeString.padStart(2,0);
+    return newTime
   }
 
   return (
@@ -34,19 +43,19 @@ function App() {
         <section className='min-h-screen flex justify-center items-center gap-3'>
 
           <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.hours}</h2>
+            <h2 className=' text-gray-800'>{time?.hours||'00'}</h2>
           </div>
 
           <div className='text-8xl md:text-9xl'>:</div>
 
           <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.min}</h2>
+            <h2 className=' text-gray-800'>{time?.min||'00'}</h2>
           </div>
 
           <div className='text-8xl md:text-9xl'>:</div>
 
           <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.sec}</h2>
+            <h2 className=' text-gray-800'>{time?.sec||'00'}</h2>
           </div>
 
         </section>
