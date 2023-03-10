@@ -40,22 +40,22 @@ function App() {
     <div>
       <main className='bg-gradient-to-t from-cyan-300 to-sky-700'>
 
-        <section className='min-h-screen flex justify-center items-center gap-3'>
+        <section className='min-h-screen flex justify-center items-center gap-2 md:gap-4'>
 
-          <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.hours||'00'}</h2>
+          <div className='font-medium bg-blue-400 rounded-lg p-4 shadow-xl shadow-sky-800/40 md:p-6 '>
+            <h2 className=' text-gray-800 text-5xl md:text-9xl'>{time?.hours||'00'}</h2>
           </div>
 
-          <div className='text-8xl md:text-9xl'>:</div>
+          <div className='text-5xl md:text-9xl'>:</div>
 
-          <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.min||'00'}</h2>
+          <div className='font-medium bg-blue-400 rounded-lg p-4 shadow-xl shadow-sky-800/40 md:p-6 '>
+            <h2 className=' text-gray-800 text-5xl md:text-9xl'>{time?.min||'00'}</h2>
           </div>
 
-          <div className='text-8xl md:text-9xl'>:</div>
+          <div className='text-5xl md:text-9xl'>:</div>
 
-          <div className='text-8xl font-medium bg-blue-400 rounded-lg p-6 shadow-xl shadow-sky-800/40 md:text-9xl '>
-            <h2 className=' text-gray-800'>{time?.sec||'00'}</h2>
+          <div className='font-medium bg-blue-400 rounded-lg p-4 shadow-xl shadow-sky-800/40 md:p-6 '>
+            <h2 className=' text-gray-800 text-5xl md:text-9xl'>{time?.sec||'00'}</h2>
           </div>
 
         </section>
